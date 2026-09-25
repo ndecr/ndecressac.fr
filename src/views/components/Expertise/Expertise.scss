@@ -1,0 +1,127 @@
+.expertise {
+  background: var(--paper);
+}
+
+.expertise__grid {
+  display: grid;
+  gap: clamp(48px, 8vw, 120px);
+  grid-template-columns: minmax(280px, 0.8fr) minmax(340px, 1.2fr);
+  margin-top: 76px;
+}
+
+.expertise__method {
+  background: var(--blue);
+  box-sizing: border-box;
+  color: var(--ink);
+  max-width: 480px;
+  min-height: 500px;
+  padding: clamp(28px, 4vw, 46px);
+}
+
+.expertise__method-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.expertise__method-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin: 18px 0 42px;
+  max-width: 380px;
+}
+
+.expertise__method-list {
+  border-top: 1px solid #080a0d80;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expertise__method-step {
+  border-bottom: 1px solid #080a0d80;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 30px 1fr;
+  padding: 18px 0;
+}
+
+.expertise__method-number {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding-top: 4px;
+}
+
+.expertise__method-copy {
+  display: grid;
+  gap: 5px;
+}
+
+.expertise__method-step-title {
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.expertise__method-step-description {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.expertise__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expertise__item {
+  border-top: 1px solid var(--divider);
+  padding: 26px 0 30px;
+}
+
+.expertise__item:last-child {
+  border-bottom: 1px solid var(--divider);
+}
+
+.expertise__item-header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expertise__item-title {
+  font-size: clamp(1.7rem, 3.2vw, 2.75rem);
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.expertise__item-number {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.expertise__item-description {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 14px 0 0;
+  max-width: 580px;
+}
+
+@media (max-width: 820px) {
+  .expertise__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise__method {
+    max-width: none;
+  }
+}

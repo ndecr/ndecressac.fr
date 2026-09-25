@@ -1,0 +1,149 @@
+.contact {
+  background: var(--blue);
+  text-align: center;
+}
+
+.contact__eyebrow {
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  margin: 0 0 28px;
+  text-transform: uppercase;
+}
+
+.contact__title {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 1.04;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.contact__description {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  margin: 38px auto 0;
+  max-width: 660px;
+}
+
+.contact__form {
+  margin: 42px auto 0;
+  max-width: 660px;
+  text-align: left;
+}
+
+.contact__form-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact__field {
+  display: block;
+  margin-top: 16px;
+}
+
+.contact__field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.contact__field-input {
+  background: #ffffffd9;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--ink);
+  font: inherit;
+  padding: 13px 14px;
+  width: 100%;
+}
+
+.contact__field-input:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.contact__field-input--message {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact__action {
+  align-items: center;
+  background: var(--ink);
+  color: var(--white);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  gap: 28px;
+  border: 0;
+  cursor: pointer;
+  margin-top: 22px;
+  padding: 18px 22px;
+  text-decoration: none;
+}
+
+.contact__action:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.contact__action:hover,
+.contact__action:focus-visible {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.contact__feedback {
+  font-weight: 700;
+  margin: 18px 0 0;
+}
+
+.contact__feedback--success {
+  color: var(--ink);
+}
+
+.contact__feedback--error {
+  color: #7d1622;
+}
+
+.contact__link {
+  align-items: center;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  display: inline-flex;
+  gap: 7px;
+  font-weight: 750;
+  padding-bottom: 6px;
+  text-decoration: none;
+}
+
+.contact__link-icon {
+  font-size: 1.05rem;
+}
+
+.contact__link-arrow {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,66 @@
+.mobile-portrait {
+  display: none;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .mobile-portrait {
+    background: #e8f4ff;
+    display: block;
+    margin: 0;
+    padding: 44px var(--page-padding) 0;
+    position: relative;
+  }
+
+  .mobile-portrait__decoration {
+    background: var(--yellow);
+    height: 82px;
+    left: max(var(--page-padding), calc(50% - 180px));
+    position: absolute;
+    top: 26px;
+    width: 82px;
+    z-index: 0;
+  }
+
+  .mobile-portrait__frame {
+    background: var(--blue-dark);
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 10px 10px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .mobile-portrait__mark {
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 800;
+    left: 24px;
+    letter-spacing: 0.07em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 24px;
+    z-index: 1;
+  }
+
+  .mobile-portrait__image {
+    aspect-ratio: 4 / 5;
+    display: block;
+    object-fit: cover;
+    object-position: center 31%;
+    width: 100%;
+  }
+
+  .mobile-portrait__caption {
+    background: var(--ink);
+    color: var(--white);
+    font-family: var(--font-serif);
+    font-size: 1.08rem;
+    line-height: 1.35;
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 14px 16px 18px;
+  }
+}

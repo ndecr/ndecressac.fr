@@ -1,0 +1,127 @@
+{
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "brandLabel": "Nicolas Decressac — home",
+    "navigationLabel": "Primary navigation",
+    "menuLabel": "Menu",
+    "technologiesLabel": "Technologies",
+    "portraitAlt": "Portrait of Nicolas Decressac",
+    "socialLinksLabel": "Social networks and contact",
+    "backToTop": "Back to top"
+  },
+  "navigation": [
+    { "label": "Expertise", "href": "#expertise" },
+    { "label": "Work", "href": "#realisations" },
+    { "label": "About", "href": "#a-propos" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Full-stack developer · Software architect · La Rochelle",
+    "titleFirst": "Clear digital products,",
+    "titleSecond": "for complex operations",
+    "introduction": "I design reliable platforms that connect operations, data and teams — from product to infrastructure, without losing sight of the people using them.",
+    "primaryAction": "Explore my work",
+    "secondaryAction": "Discuss a project",
+    "signature": "Products, infrastructure & connected systems",
+    "mobilePortraitCaption": "Nicolas Decressac · Developer & software architect",
+    "domains": [
+      "Business products",
+      "Full-stack platforms",
+      "Real-time systems",
+      "Infrastructure & operations"
+    ]
+  },
+  "expertise": {
+    "eyebrow": "What I build",
+    "title": "From technical strategy to production product",
+    "methodEyebrow": "How I work",
+    "methodTitle": "Making complexity usable.",
+    "methodSteps": [
+      { "number": "01", "title": "Understand the field", "description": "Usage, constraints and pain points before proposing a solution." },
+      { "number": "02", "title": "Clarify the journey", "description": "Business rules and interfaces brought together in a readable product." },
+      { "number": "03", "title": "Make the system reliable", "description": "Data, integrations and operations designed to last." }
+    ],
+    "items": [
+      { "number": "001", "title": "Business products", "description": "CRM, supervision, billing and documents: coherent journeys that translate operating rules without watering them down." },
+      { "number": "002", "title": "Full-stack platforms", "description": "React, TypeScript, Node.js and PostgreSQL architectures designed to evolve, remain testable and support daily work." },
+      { "number": "003", "title": "Integrated telephony", "description": "Dialer, WebRTC, Twilio and Asterisk combined into a robust, observable experience built for sales teams." },
+      { "number": "004", "title": "Systems & infrastructure", "description": "Software architecture, network, hardware, security and operations: from workstations to production." }
+    ]
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Useful, measurable systems built to last",
+    "projects": [
+      {
+        "category": "Showcase website · Example",
+        "title": "antl.fr, a website built for action",
+        "description": "One example among several websites I have delivered: a responsive showcase that clarifies the offer, guides visitors and keeps a simple foundation ready to grow.",
+        "result": "A fast, clear website built to evolve.",
+        "technologies": ["React", "TypeScript", "Vite", "SCSS"],
+        "accent": "blue",
+        "href": "https://antl.fr",
+        "linkLabel": "Visit the website"
+      },
+      {
+        "category": "Websites for independents & small businesses",
+        "title": "Your business deserves a website that works for you",
+        "description": "Showcase website, online shop, appointment booking, mobile app or service presentation: I design a clear experience that feels great to use and fits your business.",
+        "result": "Your customers find information, get in touch or place an order with ease.",
+        "technologies": ["Showcase website", "E-commerce", "Mobile app", "Booking"],
+        "accent": "yellow"
+      },
+      {
+        "category": "Legacy modernization · IVOO",
+        "title": "Evolving core systems without disrupting operations",
+        "description": "Progressive migration of a production ASP Classic/IIS SaaS to React, TypeScript and Sass, plus internal tools and a mobile-first external full-stack application while keeping legacy systems operational.",
+        "result": "Modernized historical workflows with no operational break.",
+        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "IIS"],
+        "accent": "ink"
+      },
+      {
+        "category": "Real time",
+        "title": "Telephony at the heart of the product",
+        "description": "Browser calling, queues, callbacks, recordings and media diagnostics integrated into one operations-focused interface.",
+        "result": "Less friction and more visibility on every call.",
+        "technologies": ["WebRTC", "Twilio", "Asterisk", "React"],
+        "accent": "blue"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Understand the field before writing code",
+    "body": [
+      "My path is not linear — graphic arts, industry, customer relations, entrepreneurship and then software development. That is precisely what helps me connect technical constraints with operational reality.",
+      "I design and maintain tools used every day, covering the full scope: development, software architecture, infrastructure, network and hardware. I favor explicit architecture, strong typing, passive views and validation that genuinely reflects production."
+    ],
+    "visualAlt": "Web interface preview displayed on a MacBook",
+    "principles": ["Clarity before complexity", "Reliability before hype", "Product and operations move together"],
+    "timelineTitle": "Recent journey",
+    "timeline": [
+      { "period": "Today", "organization": "antl", "role": "CTO", "description": "Responsibility for the information system: development, software architecture, infrastructure, network, hardware and security." },
+      { "period": "Apr. 2023 — Oct. 2025", "organization": "IVOO", "role": "Web Developer · Permanent contract", "description": "Migration from ASP Classic to React/TypeScript/Sass, internal and external full-stack applications, IIS production maintenance, and SQL Server, Active Directory and Exchange administration." },
+      { "period": "2023 — 2025", "organization": "OpenClassrooms", "role": "Software application developer · level 6", "description": "Professional certification earned in February 2025 after a work-study program focused on application design and development." },
+      { "period": "2022", "organization": "OpenClassrooms", "role": "Web developer · level 5", "description": "First professional certification dedicated to web interfaces and application development." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Have a project in mind?",
+    "title": "Let's build something useful.",
+    "description": "Business product, architecture, modernization or web experience: tell me about the problem and we will start by making it clear.",
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "subjectLabel": "Subject",
+      "messageLabel": "Your message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you, your message has been sent. I will get back to you as soon as possible.",
+      "error": "Your message could not be sent. Please try again shortly."
+    }
+  },
+  "footer": {
+    "availability": "Based in La Rochelle · Open to conversations",
+    "copyright": "All rights reserved"
+  }
+}

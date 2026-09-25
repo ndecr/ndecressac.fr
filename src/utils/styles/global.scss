@@ -1,0 +1,126 @@
+:root {
+  --blue: #4d9ce5;
+  --blue-dark: #155e94;
+  --divider: #c8ced4;
+  --ink: #080a0d;
+  --muted: #676c73;
+  --paper: #f5f5f2;
+  --white: #ffffff;
+  --yellow: #f5f455;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --page-padding: clamp(20px, 4.7vw, 72px);
+  --page-width: 1500px;
+  --site-header-height: 112px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main [id] {
+  scroll-margin-top: var(--site-header-height);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
+}
+
+.section {
+  padding: clamp(90px, 11vw, 170px) var(--page-padding);
+}
+
+.section-heading {
+  max-width: 880px;
+}
+
+.section-heading__eyebrow {
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.section-heading__title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.1rem, 6.6vw, 6.5rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.section-heading--light {
+  color: var(--white);
+}
+
+.button {
+  align-items: center;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 17px 20px;
+  text-decoration: none;
+}
+
+.button--primary {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--white);
+}
+
+.button--secondary {
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible,
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  background: var(--yellow);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button,
+  a {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --site-header-height: 84px;
+  }
+}

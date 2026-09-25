@@ -1,0 +1,127 @@
+{
+  "accessibility": {
+    "skipToContent": "Aller au contenu principal",
+    "brandLabel": "Nicolas Decressac — accueil",
+    "navigationLabel": "Navigation principale",
+    "menuLabel": "Menu",
+    "technologiesLabel": "Technologies",
+    "portraitAlt": "Portrait de Nicolas Decressac",
+    "socialLinksLabel": "Réseaux et contact",
+    "backToTop": "Retour en haut"
+  },
+  "navigation": [
+    { "label": "Expertise", "href": "#expertise" },
+    { "label": "Réalisations", "href": "#realisations" },
+    { "label": "À propos", "href": "#a-propos" },
+    { "label": "Me contacter", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Développeur full-stack · Architecte logiciel · La Rochelle",
+    "titleFirst": "Des produits numériques clairs,",
+    "titleSecond": "pour des métiers complexes",
+    "introduction": "Je conçois des plateformes fiables qui relient opérations, données et équipes — du produit à l'infrastructure, sans perdre de vue les personnes qui les utilisent.",
+    "primaryAction": "Découvrir mon travail",
+    "secondaryAction": "Parler d'un projet",
+    "signature": "Produits, infrastructure & systèmes connectés",
+    "mobilePortraitCaption": "Nicolas Decressac · Développeur & architecte logiciel",
+    "domains": [
+      "Produits métier",
+      "Plateformes full-stack",
+      "Systèmes temps réel",
+      "Infrastructure & exploitation"
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Ce que je construis",
+    "title": "De la stratégie technique au produit en production",
+    "methodEyebrow": "Méthode de travail",
+    "methodTitle": "Rendre le complexe utilisable.",
+    "methodSteps": [
+      { "number": "01", "title": "Comprendre le terrain", "description": "Usages, contraintes et irritants avant toute solution." },
+      { "number": "02", "title": "Clarifier le parcours", "description": "Règles métier et interfaces réunies dans un produit lisible." },
+      { "number": "03", "title": "Fiabiliser le système", "description": "Données, intégrations et exploitation conçues pour durer." }
+    ],
+    "items": [
+      { "number": "001", "title": "Produits métier", "description": "CRM, supervision, facturation et documents : des parcours cohérents qui traduisent les règles opérationnelles sans les diluer." },
+      { "number": "002", "title": "Plateformes full-stack", "description": "Architectures React, TypeScript, Node.js et PostgreSQL pensées pour évoluer, rester testables et soutenir le travail quotidien." },
+      { "number": "003", "title": "Téléphonie intégrée", "description": "Dialer, WebRTC, Twilio et Asterisk réunis dans une expérience robuste, observable et réellement adaptée aux équipes commerciales." },
+      { "number": "004", "title": "Systèmes & infrastructure", "description": "Architecture logicielle, réseau, matériel, sécurité et exploitation : du poste de travail à la production." }
+    ]
+  },
+  "work": {
+    "eyebrow": "Sélection de réalisations",
+    "title": "Des systèmes utiles, mesurables et faits pour durer",
+    "projects": [
+      {
+        "category": "Site vitrine · Exemple",
+        "title": "antl.fr, une vitrine pensée pour l'action",
+        "description": "Un exemple parmi d'autres sites réalisés : conception d'une vitrine responsive qui clarifie l'offre, guide les visiteurs et conserve une base simple à enrichir.",
+        "result": "Un site rapide, lisible et prêt à évoluer.",
+        "technologies": ["React", "TypeScript", "Vite", "SCSS"],
+        "accent": "blue",
+        "href": "https://antl.fr",
+        "linkLabel": "Découvrir le site"
+      },
+      {
+        "category": "Sites web pour indépendants & PME",
+        "title": "Votre activité mérite un site qui travaille pour vous",
+        "description": "Site vitrine, boutique en ligne, prise de rendez-vous, application mobile ou présentation de vos services : je conçois une expérience claire, agréable à utiliser et adaptée à votre activité.",
+        "result": "Vos clients trouvent l'information, vous contactent ou commandent simplement.",
+        "technologies": ["Site vitrine", "E-commerce", "Application mobile", "Rendez-vous"],
+        "accent": "yellow"
+      },
+      {
+        "category": "Modernisation legacy · IVOO",
+        "title": "Faire évoluer un SI sans interrompre le métier",
+        "description": "Migration progressive d'un SaaS de production ASP Classic/IIS vers React, TypeScript et Sass, création d'outils internes et d'une application externe full-stack mobile-first, tout en maintenant l'existant.",
+        "result": "Des usages historiques modernisés sans rupture d'exploitation.",
+        "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "IIS"],
+        "accent": "ink"
+      },
+      {
+        "category": "Temps réel",
+        "title": "La téléphonie au cœur du produit",
+        "description": "Intégration d'appels navigateur, gestion de file, rappels, enregistrements et diagnostics média dans une interface unique orientée opérations.",
+        "result": "Moins de friction, plus de visibilité sur chaque appel.",
+        "technologies": ["WebRTC", "Twilio", "Asterisk", "React"],
+        "accent": "blue"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Comprendre le terrain avant d'écrire le code",
+    "body": [
+      "Mon parcours n'est pas linéaire — arts graphiques, industrie, relation client, entrepreneuriat puis développement logiciel. C'est précisément ce qui me permet de relier contraintes techniques et réalité opérationnelle.",
+      "Je conçois et maintiens des outils utilisés au quotidien, en couvrant l'ensemble du périmètre : développement, architecture logicielle, infrastructure, réseau et matériel. Je privilégie les architectures explicites, le typage fort, les vues passives et les validations qui reflètent vraiment la production."
+    ],
+    "visualAlt": "Aperçu d'une interface web affiché sur un MacBook",
+    "principles": ["Clarté avant complexité", "Fiabilité avant effet de mode", "Produit et métier avancent ensemble"],
+    "timelineTitle": "Parcours récent",
+    "timeline": [
+      { "period": "Aujourd'hui", "organization": "antl", "role": "CTO", "description": "Responsabilité du système d'information : développement, architecture logicielle, infrastructure, réseau, matériel et sécurité." },
+      { "period": "Avr. 2023 — oct. 2025", "organization": "IVOO", "role": "Web Developer · CDI", "description": "Migration du SaaS ASP Classic vers React/TypeScript/Sass, développement d'applications internes et externes full-stack, maintenance de production IIS et administration SQL Server, Active Directory et Exchange." },
+      { "period": "2023 — 2025", "organization": "OpenClassrooms", "role": "Développeur concepteur logiciel · niveau 6", "description": "Titre professionnel obtenu en février 2025, après une formation en alternance centrée sur la conception et le développement d'applications." },
+      { "period": "2022", "organization": "OpenClassrooms", "role": "Développeur intégrateur web · niveau 5", "description": "Première certification professionnelle consacrée au développement d'interfaces et d'applications web." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Un projet en tête ?",
+    "title": "Construisons quelque chose d'utile.",
+    "description": "Produit métier, architecture, modernisation ou expérience web : expliquez-moi le problème, nous commencerons par le rendre clair.",
+    "form": {
+      "nameLabel": "Nom",
+      "emailLabel": "E-mail",
+      "subjectLabel": "Objet",
+      "messageLabel": "Votre message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "success": "Merci, votre message est bien parti. Je vous répondrai dès que possible.",
+      "error": "L’envoi n’a pas abouti. Vous pouvez réessayer dans un instant."
+    }
+  },
+  "footer": {
+    "availability": "Basé à La Rochelle · Ouvert aux échanges",
+    "copyright": "Tous droits réservés"
+  }
+}
