@@ -71,6 +71,9 @@
 }
 
 .work-card__result {
+  align-items: center;
+  display: flex;
+  gap: 6px;
   font-weight: 750;
   margin: 22px 0 0;
 }
@@ -93,7 +96,10 @@
 }
 
 .work-card__link {
+  align-items: center;
   color: var(--ink);
+  display: inline-flex;
+  gap: 8px;
   font-weight: 800;
   margin-top: 28px;
   text-underline-offset: 5px;

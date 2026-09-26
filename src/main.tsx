@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { LanguageProvider } from "./context";
-import "./services";
+import { i18nReady } from "./services";
 import "./utils/styles/global.scss";
 import { HomePage } from "./views/layouts";
 
@@ -19,4 +19,6 @@ const application = (
   </StrictMode>
 );
 
-hydrateRoot(rootElement, application);
+void i18nReady.then(() => {
+  hydrateRoot(rootElement, application);
+});

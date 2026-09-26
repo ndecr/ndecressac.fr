@@ -44,7 +44,8 @@ export function Contact({ content, form, socialLinks, linksLabel, externalLinkLa
           <textarea className="contact__field-input contact__field-input--message" name="message" onChange={form.onChange} required rows={6} value={form.values.message} />
         </label>
         <button className="contact__action" disabled={form.status === "sending"} type="submit">
-          {form.status === "sending" ? content.form.sending : content.form.submit} <FiArrowUpRight aria-hidden="true" />
+          <span>{form.status === "sending" ? content.form.sending : content.form.submit}</span>
+          <FiArrowUpRight aria-hidden="true" />
         </button>
         {form.statusMessage !== null ? <p className={`contact__feedback contact__feedback--${form.status}`} role="status" aria-live="polite">{form.statusMessage}</p> : null}
       </form>

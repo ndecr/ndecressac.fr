@@ -22,15 +22,20 @@
     z-index: 0;
   }
 
-  .mobile-portrait__frame {
-    background: var(--blue-dark);
-    margin: 0 auto;
+.mobile-portrait__frame {
+  background: var(--blue-dark);
+  margin: 0 auto;
     max-width: 360px;
     padding: 10px 10px 0;
     position: relative;
     width: 100%;
-    z-index: 1;
-  }
+  z-index: 1;
+}
+
+.mobile-portrait__picture {
+  display: block;
+  width: 100%;
+}
 
   .mobile-portrait__mark {
     color: var(--white);
@@ -48,6 +53,7 @@
   .mobile-portrait__image {
     aspect-ratio: 4 / 5;
     display: block;
+    height: auto;
     object-fit: cover;
     object-position: center 31%;
     width: 100%;

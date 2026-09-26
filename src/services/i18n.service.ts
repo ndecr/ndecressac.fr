@@ -35,7 +35,7 @@ export function saveClientLanguage(language: LanguageCode): void {
   }
 }
 
-void i18n
+export const i18nReady = i18n
   .use(initReactI18next)
   .init({
     resources: {

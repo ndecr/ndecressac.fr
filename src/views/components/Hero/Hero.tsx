@@ -20,21 +20,35 @@ export function Hero({ content, portraitAlt }: HeroProps) {
           <p className="hero__introduction">{content.introduction}</p>
           <div className="hero__actions">
             <a className="button button--primary" href="#realisations">
-              {content.primaryAction} <FiArrowDownRight aria-hidden="true" />
+              <span>{content.primaryAction}</span>
+              <FiArrowDownRight aria-hidden="true" />
             </a>
             <a className="button button--secondary" href="#contact">
-              {content.secondaryAction} <FiArrowRight aria-hidden="true" />
+              <span>{content.secondaryAction}</span>
+              <FiArrowRight aria-hidden="true" />
             </a>
           </div>
         </div>
         <figure className="hero__portrait">
           <div className="hero__portrait-frame">
             <span className="hero__portrait-mark" aria-hidden="true">ND.</span>
-            <img
-              alt={portraitAlt}
-              className="hero__portrait-image"
-              src="/nicolas-decressac-2026.jpg"
-            />
+            <picture className="hero__portrait-picture">
+              <source
+                sizes="390px"
+                srcSet="/nicolas-decressac-2026-640.webp 640w, /nicolas-decressac-2026-960.webp 960w"
+                type="image/webp"
+              />
+              <img
+                alt={portraitAlt}
+                className="hero__portrait-image"
+                decoding="async"
+                fetchPriority="high"
+                height="1600"
+                sizes="390px"
+                src="/nicolas-decressac-2026.jpg"
+                width="1200"
+              />
+            </picture>
           </div>
           <figcaption className="hero__portrait-caption">
             <span className="hero__portrait-caption-name">Nicolas Decressac</span>
