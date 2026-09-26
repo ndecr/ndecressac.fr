@@ -9,11 +9,11 @@ interface HeroProps {
 
 export function Hero({ content, portraitAlt }: HeroProps) {
   return (
-    <section className="hero" id="accueil">
+    <section className="hero" id="accueil" aria-labelledby="hero-heading">
       <div className="hero__layout">
         <div className="hero__content">
           <p className="hero__eyebrow">{content.eyebrow}</p>
-          <h1 className="hero__title">
+          <h1 className="hero__title" id="hero-heading">
             <span className="hero__title-serif">{content.titleFirst}</span>
             <span className="hero__title-sans">{content.titleSecond}</span>
           </h1>

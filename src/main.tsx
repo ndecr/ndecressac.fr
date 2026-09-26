@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { LanguageProvider } from "./context";
 import "./services";
 import "./utils/styles/global.scss";
@@ -11,10 +11,16 @@ if (rootElement === null) {
   throw new Error("Root element not found");
 }
 
-createRoot(rootElement).render(
+const application = (
   <StrictMode>
     <LanguageProvider>
       <HomePage />
     </LanguageProvider>
   </StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, application);
+} else {
+  createRoot(rootElement).render(application);
+}

@@ -15,28 +15,29 @@ interface ContactProps {
   readonly form: ContactFormModel;
   readonly socialLinks: readonly SocialLink[];
   readonly linksLabel: string;
+  readonly externalLinkLabel: string;
 }
 
-export function Contact({ content, form, socialLinks, linksLabel }: ContactProps) {
+export function Contact({ content, form, socialLinks, linksLabel, externalLinkLabel }: ContactProps) {
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section" id="contact" aria-labelledby="contact-heading">
       <p className="contact__eyebrow">{content.eyebrow}</p>
-      <h2 className="contact__title">{content.title}</h2>
-      <p className="contact__description">{content.description}</p>
-      <form className="contact__form" onSubmit={(event) => { void form.onSubmit(event); }}>
+      <h2 className="contact__title" id="contact-heading">{content.title}</h2>
+      <p className="contact__description" id="contact-description">{content.description}</p>
+      <form className="contact__form" aria-describedby="contact-description" onSubmit={(event) => { void form.onSubmit(event); }}>
         <div className="contact__form-row">
           <label className="contact__field">
             <span className="contact__field-label">{content.form.nameLabel}</span>
-            <input className="contact__field-input" name="name" onChange={form.onChange} required type="text" value={form.values.name} />
+            <input autoComplete="name" className="contact__field-input" name="name" onChange={form.onChange} required type="text" value={form.values.name} />
           </label>
           <label className="contact__field">
             <span className="contact__field-label">{content.form.emailLabel}</span>
-            <input className="contact__field-input" name="email" onChange={form.onChange} required type="email" value={form.values.email} />
+            <input autoComplete="email" className="contact__field-input" name="email" onChange={form.onChange} required type="email" value={form.values.email} />
           </label>
         </div>
         <label className="contact__field">
           <span className="contact__field-label">{content.form.subjectLabel}</span>
-          <input className="contact__field-input" name="subject" onChange={form.onChange} required type="text" value={form.values.subject} />
+          <input autoComplete="off" className="contact__field-input" name="subject" onChange={form.onChange} required type="text" value={form.values.subject} />
         </label>
         <label className="contact__field">
           <span className="contact__field-label">{content.form.messageLabel}</span>
@@ -45,14 +46,14 @@ export function Contact({ content, form, socialLinks, linksLabel }: ContactProps
         <button className="contact__action" disabled={form.status === "sending"} type="submit">
           {form.status === "sending" ? content.form.sending : content.form.submit} <FiArrowUpRight aria-hidden="true" />
         </button>
-        {form.statusMessage !== null ? <p className={`contact__feedback contact__feedback--${form.status}`} role="status">{form.statusMessage}</p> : null}
+        {form.statusMessage !== null ? <p className={`contact__feedback contact__feedback--${form.status}`} role="status" aria-live="polite">{form.statusMessage}</p> : null}
       </form>
       <nav className="contact__links" aria-label={linksLabel}>
         {socialLinks.map((link) => {
           const SocialIcon = socialIconByKind[link.kind];
 
           return (
-            <a className="contact__link" href={link.href} key={link.label} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+            <a className="contact__link" href={link.href} key={link.label} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" aria-label={`${link.label} (${externalLinkLabel})`}>
               <SocialIcon className="contact__link-icon" aria-hidden="true" />
               <span>{link.label}</span>
               <FiArrowUpRight className="contact__link-arrow" aria-hidden="true" />

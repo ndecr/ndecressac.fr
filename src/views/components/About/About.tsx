@@ -7,11 +7,11 @@ interface AboutProps {
 
 export function About({ content }: AboutProps) {
   return (
-    <section className="about section" id="a-propos">
+    <section className="about section" id="a-propos" aria-labelledby="about-heading">
       <div className="about__intro">
         <div className="section-heading">
           <p className="section-heading__eyebrow">{content.eyebrow}</p>
-          <h2 className="section-heading__title">{content.title}</h2>
+          <h2 className="section-heading__title" id="about-heading">{content.title}</h2>
         </div>
         <div className="about__copy">
           {content.body.map((paragraph) => (
@@ -26,14 +26,14 @@ export function About({ content }: AboutProps) {
         <ol className="about__principles">
           {content.principles.map((principle, index) => (
             <li className="about__principle" key={principle}>
-              <span className="about__principle-number">0{index + 1}</span>
+              <span className="about__principle-number" aria-hidden="true">0{index + 1}</span>
               <span>{principle}</span>
             </li>
           ))}
         </ol>
       </div>
-      <div className="about__timeline-block">
-        <h3 className="about__timeline-title">{content.timelineTitle}</h3>
+      <section className="about__timeline-block" aria-labelledby="timeline-heading">
+        <h3 className="about__timeline-title" id="timeline-heading">{content.timelineTitle}</h3>
         <ol className="about__timeline">
           {content.timeline.map((item) => (
             <li className="about__timeline-item" key={`${item.organization}-${item.period}`}>
@@ -46,7 +46,7 @@ export function About({ content }: AboutProps) {
             </li>
           ))}
         </ol>
-      </div>
+      </section>
     </section>
   );
 }

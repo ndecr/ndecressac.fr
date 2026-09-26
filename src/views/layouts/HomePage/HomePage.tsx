@@ -18,16 +18,25 @@ export function HomePage() {
         onCloseNavigation={page.closeNavigation}
         onChangeLanguage={page.changeLanguage}
       />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Hero content={page.content.hero} portraitAlt={page.content.accessibility.portraitAlt} />
         <MobilePortrait
           caption={page.content.hero.mobilePortraitCaption}
-          portraitAlt={page.content.accessibility.portraitAlt}
         />
         <Expertise content={page.content.expertise} />
-        <Work content={page.content.work} technologiesLabel={page.content.accessibility.technologiesLabel} />
+        <Work
+          content={page.content.work}
+          technologiesLabel={page.content.accessibility.technologiesLabel}
+          externalLinkLabel={page.content.accessibility.externalLinkLabel}
+        />
         <About content={page.content.about} />
-        <Contact content={page.content.contact} form={contactForm} socialLinks={page.socialLinks} linksLabel={page.content.accessibility.socialLinksLabel} />
+        <Contact
+          content={page.content.contact}
+          form={contactForm}
+          socialLinks={page.socialLinks}
+          linksLabel={page.content.accessibility.socialLinksLabel}
+          externalLinkLabel={page.content.accessibility.externalLinkLabel}
+        />
       </main>
       <Footer content={page.content.footer} currentYear={page.currentYear} backToTopLabel={page.content.accessibility.backToTop} />
     </div>

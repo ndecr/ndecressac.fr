@@ -11,7 +11,7 @@ interface FooterProps {
 export function Footer({ content, currentYear, backToTopLabel }: FooterProps) {
   return (
     <footer className="site-footer">
-      <p className="site-footer__availability">{content.availability}</p>
+      <address className="site-footer__availability">{content.availability}</address>
       <p className="site-footer__copyright">© {currentYear} Nicolas Decressac · {content.copyright}</p>
       <a className="site-footer__back" href="#accueil" aria-label={backToTopLabel}><FiArrowUp aria-hidden="true" /></a>
     </footer>

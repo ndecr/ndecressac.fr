@@ -30,6 +30,7 @@ export function Header({
         <button
           className="site-header__menu-button"
           type="button"
+          aria-label={isNavigationOpen ? accessibility.closeMenuLabel : accessibility.menuLabel}
           aria-expanded={isNavigationOpen}
           aria-controls="primary-navigation"
           onClick={onToggleNavigation}
@@ -50,7 +51,7 @@ export function Header({
               {item.label}
             </a>
           ))}
-          <button className="site-header__language" type="button" onClick={onChangeLanguage}>
+          <button className="site-header__language" type="button" aria-label={accessibility.changeLanguageLabel} onClick={onChangeLanguage}>
             <FiGlobe className="site-header__language-icon" aria-hidden="true" />
             {alternateLanguage.toUpperCase()}
           </button>

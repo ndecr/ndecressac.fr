@@ -47,6 +47,9 @@ export interface PortfolioContent {
     readonly brandLabel: string;
     readonly navigationLabel: string;
     readonly menuLabel: string;
+    readonly closeMenuLabel: string;
+    readonly changeLanguageLabel: string;
+    readonly externalLinkLabel: string;
     readonly technologiesLabel: string;
     readonly portraitAlt: string;
     readonly socialLinksLabel: string;
