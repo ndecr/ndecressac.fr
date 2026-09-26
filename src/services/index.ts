@@ -1,3 +1,3 @@
 export { sendContactMessage } from "./contact.service";
-export { i18n } from "./i18n.service";
+export { getClientLanguage, i18n, saveClientLanguage } from "./i18n.service";
 export { getPortfolioContent } from "./portfolio.service";

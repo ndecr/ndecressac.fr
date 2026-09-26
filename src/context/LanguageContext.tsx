@@ -1,6 +1,6 @@
-import { useMemo, type PropsWithChildren } from "react";
+import { useEffect, useMemo, type PropsWithChildren } from "react";
 import { useTranslation } from "react-i18next";
-import { i18n } from "../services";
+import { getClientLanguage, i18n, saveClientLanguage } from "../services";
 import { LanguageContext, type LanguageContextValue } from "./language.context";
 
 export function LanguageProvider({ children }: PropsWithChildren) {
@@ -8,11 +8,24 @@ export function LanguageProvider({ children }: PropsWithChildren) {
   const language = activeI18n.resolvedLanguage === "en" ? "en" : "fr";
   const alternateLanguage = language === "fr" ? "en" : "fr";
 
+  useEffect(() => {
+    const clientLanguage = getClientLanguage();
+
+    document.documentElement.lang = language;
+
+    if (clientLanguage !== language) {
+      void i18n.changeLanguage(clientLanguage).then(() => {
+        document.documentElement.lang = clientLanguage;
+      });
+    }
+  }, [language]);
+
   const value = useMemo<LanguageContextValue>(
     () => ({
       language,
       alternateLanguage,
       changeLanguage: () => {
+        saveClientLanguage(alternateLanguage);
         void i18n.changeLanguage(alternateLanguage);
         document.documentElement.lang = alternateLanguage;
       }
