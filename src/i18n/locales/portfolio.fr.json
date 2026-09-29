@@ -101,6 +101,7 @@
     "visualAlt": "Aperçu d'une interface web affiché sur un MacBook",
     "principles": ["Clarté avant complexité", "Fiabilité avant effet de mode", "Produit et métier avancent ensemble"],
     "timelineTitle": "Parcours récent",
+    "curriculumVitaeAction": "Voir le CV complet",
     "timeline": [
       { "period": "Aujourd'hui", "organization": "antl", "role": "CTO", "description": "Responsabilité du système d'information : développement, architecture logicielle, infrastructure, réseau, matériel et sécurité." },
       { "period": "Avr. 2023 — oct. 2025", "organization": "IVOO", "role": "Web Developer · CDI", "description": "Migration du SaaS ASP Classic vers React/TypeScript/Sass, développement d'applications internes et externes full-stack, maintenance de production IIS et administration SQL Server, Active Directory et Exchange." },
@@ -120,11 +121,27 @@
       "submit": "Envoyer le message",
       "sending": "Envoi en cours…",
       "success": "Merci, votre message est bien parti. Je vous répondrai dès que possible.",
-      "error": "L’envoi n’a pas abouti. Vous pouvez réessayer dans un instant."
+      "error": "L’envoi n’a pas abouti. Vous pouvez réessayer dans un instant.",
+      "privacyNotice": "Vos informations servent uniquement à répondre à votre demande.",
+      "privacyLinkLabel": "En savoir plus sur vos données"
     }
   },
   "footer": {
     "availability": "Basé à La Rochelle · Ouvert aux échanges",
-    "copyright": "Tous droits réservés"
+    "copyright": "Tous droits réservés",
+    "legalLinkLabel": "Mentions légales & confidentialité"
+  },
+  "cookieConsent": {
+    "title": "Votre vie privée compte.",
+    "description": "Le site fonctionne sans traceur non essentiel. Une mesure d’audience ne sera activée qu’avec votre accord.",
+    "accept": "Accepter la mesure d’audience",
+    "reject": "Tout refuser",
+    "customize": "Personnaliser",
+    "back": "Retour",
+    "requiredLabel": "Fonctionnement essentiel",
+    "requiredStatus": "Toujours actif",
+    "analyticsLabel": "Mesure d’audience",
+    "analyticsDescription": "Permet de comprendre de façon agrégée les pages consultées et les parcours sur le site.",
+    "savePreferences": "Enregistrer mes choix"
   }
 }

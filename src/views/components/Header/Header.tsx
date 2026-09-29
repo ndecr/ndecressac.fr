@@ -10,6 +10,7 @@ interface HeaderProps {
   readonly onToggleNavigation: () => void;
   readonly onCloseNavigation: () => void;
   readonly onChangeLanguage: () => void;
+  readonly brandHref?: string;
 }
 
 export function Header({
@@ -19,12 +20,13 @@ export function Header({
   isNavigationOpen,
   onToggleNavigation,
   onCloseNavigation,
-  onChangeLanguage
+  onChangeLanguage,
+  brandHref = "#accueil"
 }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="site-header__content">
-        <a className="site-header__brand" href="#accueil" aria-label={accessibility.brandLabel}>
+        <a className="site-header__brand" href={brandHref} aria-label={accessibility.brandLabel}>
           ND<span className="site-header__brand-dot">.</span>
         </a>
         <button

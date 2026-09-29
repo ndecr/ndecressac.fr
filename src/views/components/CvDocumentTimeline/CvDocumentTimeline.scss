@@ -1,0 +1,73 @@
+.cv-document-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-document-timeline__item {
+  border-top: 1px solid var(--cv-divider);
+  break-inside: avoid;
+  display: grid;
+  gap: 4mm;
+  grid-template-columns: 29mm 1fr;
+  padding: 3.5mm 0 4.5mm;
+}
+
+.cv-document-timeline__item:last-child {
+  border-bottom: 1px solid var(--cv-divider);
+}
+
+.cv-document-timeline__period {
+  font-family: var(--cv-mono);
+  font-size: 7pt;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.cv-document-timeline__organization {
+  font-size: 10pt;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.cv-document-timeline__role {
+  color: var(--cv-blue-dark);
+  font-size: 8pt;
+  font-weight: 750;
+  margin: 1.2mm 0 1.8mm;
+}
+
+.cv-document-timeline__description {
+  color: var(--cv-muted);
+  font-family: var(--cv-serif);
+  font-size: 8.2pt;
+  line-height: 1.38;
+  margin: 0;
+}
+
+.cv-document-timeline__highlights {
+  display: grid;
+  gap: 1.4mm;
+  list-style: none;
+  margin: 2.4mm 0 0;
+  padding: 0;
+}
+
+.cv-document-timeline__highlights li {
+  color: var(--cv-muted);
+  font-size: 7.6pt;
+  line-height: 1.35;
+  padding-left: 3mm;
+  position: relative;
+}
+
+.cv-document-timeline__highlights li::before {
+  background: var(--cv-blue-dark);
+  content: "";
+  height: 1.2mm;
+  left: 0;
+  position: absolute;
+  top: 0.48em;
+  width: 1.2mm;
+}

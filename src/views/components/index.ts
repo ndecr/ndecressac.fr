@@ -1,5 +1,10 @@
 export { About } from "./About/About";
 export { Contact } from "./Contact/Contact";
+export { CookieConsent } from "./CookieConsent/CookieConsent";
+export { CvDocumentProjects } from "./CvDocumentProjects/CvDocumentProjects";
+export { CvDocumentSection } from "./CvDocumentSection/CvDocumentSection";
+export { CvDocumentSidebar } from "./CvDocumentSidebar/CvDocumentSidebar";
+export { CvDocumentTimeline } from "./CvDocumentTimeline/CvDocumentTimeline";
 export { Expertise } from "./Expertise/Expertise";
 export { Footer } from "./Footer/Footer";
 export { Header } from "./Header/Header";

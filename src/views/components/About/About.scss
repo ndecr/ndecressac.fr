@@ -135,6 +135,26 @@
   margin: 0;
 }
 
+.about__curriculum-vitae-action {
+  align-items: center;
+  background: var(--blue);
+  border: 0;
+  color: var(--ink);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 0;
+  padding: 18px 22px;
+}
+
+.about__curriculum-vitae-action:hover,
+.about__curriculum-vitae-action:focus-visible {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
 @media (max-width: 820px) {
   .about__intro,
   .about__visual-block,

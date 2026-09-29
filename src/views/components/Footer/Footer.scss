@@ -6,13 +6,23 @@
   font-family: var(--font-mono);
   font-size: 0.68rem;
   gap: 20px;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   padding: 30px var(--page-padding);
 }
 
 .site-footer__availability,
 .site-footer__copyright {
   margin: 0;
+}
+
+.site-footer__legal {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-footer__legal:hover,
+.site-footer__legal:focus-visible {
+  color: var(--yellow);
 }
 
 .site-footer__back {
@@ -42,8 +52,13 @@
     grid-row: 2;
   }
 
+  .site-footer__legal {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
   .site-footer__back {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
   }
 }

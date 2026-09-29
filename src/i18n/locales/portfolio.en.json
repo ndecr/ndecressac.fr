@@ -101,6 +101,7 @@
     "visualAlt": "Web interface preview displayed on a MacBook",
     "principles": ["Clarity before complexity", "Reliability before hype", "Product and operations move together"],
     "timelineTitle": "Recent journey",
+    "curriculumVitaeAction": "View full CV",
     "timeline": [
       { "period": "Today", "organization": "antl", "role": "CTO", "description": "Responsibility for the information system: development, software architecture, infrastructure, network, hardware and security." },
       { "period": "Apr. 2023 — Oct. 2025", "organization": "IVOO", "role": "Web Developer · Permanent contract", "description": "Migration from ASP Classic to React/TypeScript/Sass, internal and external full-stack applications, IIS production maintenance, and SQL Server, Active Directory and Exchange administration." },
@@ -120,11 +121,27 @@
       "submit": "Send message",
       "sending": "Sending…",
       "success": "Thank you, your message has been sent. I will get back to you as soon as possible.",
-      "error": "Your message could not be sent. Please try again shortly."
+      "error": "Your message could not be sent. Please try again shortly.",
+      "privacyNotice": "Your information is used solely to reply to your request.",
+      "privacyLinkLabel": "Learn more about your data"
     }
   },
   "footer": {
     "availability": "Based in La Rochelle · Open to conversations",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "legalLinkLabel": "Legal notice & privacy"
+  },
+  "cookieConsent": {
+    "title": "Your privacy matters.",
+    "description": "The website works without non-essential trackers. Audience measurement will only be enabled with your consent.",
+    "accept": "Accept audience measurement",
+    "reject": "Reject all",
+    "customize": "Customize",
+    "back": "Back",
+    "requiredLabel": "Essential operation",
+    "requiredStatus": "Always active",
+    "analyticsLabel": "Audience measurement",
+    "analyticsDescription": "Helps understand, in aggregate, viewed pages and journeys through the website.",
+    "savePreferences": "Save my choices"
   }
 }

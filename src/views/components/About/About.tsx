@@ -1,4 +1,5 @@
 import type { PortfolioContent } from "../../../types";
+import { Link } from "react-router-dom";
 import { formatSequenceNumber } from "../../../utils";
 import "./About.scss";
 
@@ -63,6 +64,7 @@ export function About({ content }: AboutProps) {
             </li>
           ))}
         </ol>
+        <Link className="about__curriculum-vitae-action button button--secondary" to="/cv/">{content.curriculumVitaeAction}</Link>
       </section>
     </section>
   );

@@ -1,15 +1,20 @@
-import { renderToStaticMarkup } from "react-dom/server";
-import { LanguageProvider } from "./context";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+import { CookieConsentProvider, LanguageProvider } from "./context";
 import { i18n, i18nReady } from "./services";
-import { HomePage } from "./views/layouts";
+import { ApplicationRouter } from "./views/layouts";
 
-export async function render(): Promise<string> {
+export async function render(pathname: string): Promise<string> {
   await i18nReady;
   await i18n.changeLanguage("fr");
 
-  return renderToStaticMarkup(
-    <LanguageProvider>
-      <HomePage />
-    </LanguageProvider>
+  return renderToString(
+    <StaticRouter location={pathname}>
+      <LanguageProvider>
+        <CookieConsentProvider>
+          <ApplicationRouter />
+        </CookieConsentProvider>
+      </LanguageProvider>
+    </StaticRouter>
   );
 }

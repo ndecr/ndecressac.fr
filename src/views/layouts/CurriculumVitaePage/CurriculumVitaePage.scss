@@ -1,0 +1,320 @@
+.curriculum-vitae-page {
+  --cv-blue: #4d9ce5;
+  --cv-blue-dark: #155e94;
+  --cv-divider: #c8ced4;
+  --cv-ink: #080a0d;
+  --cv-muted: #676c73;
+  --cv-paper: #f5f5f2;
+  --cv-white: #ffffff;
+  --cv-yellow: #f5f455;
+  --cv-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --cv-serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  background: #dfe5e9;
+  color: var(--cv-ink);
+  min-height: 100dvh;
+  padding: 28px;
+}
+
+.curriculum-vitae-page__toolbar {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin: 0 auto 20px;
+  max-width: 210mm;
+}
+
+.curriculum-vitae-page__toolbar-action {
+  align-items: center;
+  color: var(--ink);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  gap: 9px;
+  text-decoration: none;
+}
+
+.curriculum-vitae-page__toolbar-action--print {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--white);
+  cursor: pointer;
+  padding: 12px 16px;
+}
+
+.curriculum-vitae-page__toolbar-action--print:hover,
+.curriculum-vitae-page__toolbar-action--print:focus-visible {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.curriculum-vitae {
+  display: grid;
+  gap: 10mm;
+  margin: 0 auto;
+  width: 210mm;
+}
+
+.curriculum-vitae__page {
+  background: var(--cv-white);
+  box-shadow: 0 7mm 18mm #080a0d1f;
+  box-sizing: border-box;
+  min-height: 297mm;
+  padding: 13mm 14mm 11mm;
+  position: relative;
+}
+
+.curriculum-vitae__page--first {
+  display: flex;
+  flex-direction: column;
+}
+
+.curriculum-vitae__header {
+  border-bottom: 1px solid var(--cv-ink);
+  padding-bottom: 6mm;
+}
+
+.curriculum-vitae__eyebrow {
+  font-family: var(--cv-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 6mm;
+  text-transform: uppercase;
+}
+
+.curriculum-vitae__identity {
+  align-items: end;
+  display: flex;
+  gap: 8mm;
+  justify-content: space-between;
+}
+
+.curriculum-vitae__name {
+  font-family: var(--cv-serif);
+  font-size: 29pt;
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.curriculum-vitae__role {
+  color: var(--cv-blue-dark);
+  font-size: 10pt;
+  font-weight: 750;
+  margin: 3mm 0 0;
+}
+
+.curriculum-vitae__location {
+  font-family: var(--cv-mono);
+  font-size: 7.5pt;
+  margin: 0;
+  text-align: right;
+}
+
+.curriculum-vitae__content {
+  display: grid;
+  flex: 1;
+  gap: 9mm;
+  grid-template-columns: 54mm minmax(0, 1fr);
+  padding-top: 8mm;
+}
+
+.curriculum-vitae__main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 9mm;
+  justify-content: center;
+}
+
+.curriculum-vitae__recent {
+  margin: 0;
+}
+
+.curriculum-vitae__intro {
+  background: var(--cv-blue);
+  padding: 7mm;
+}
+
+.curriculum-vitae__intro-label {
+  font-family: var(--cv-mono);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  margin: 0 0 6mm;
+  text-transform: uppercase;
+}
+
+.curriculum-vitae__intro-copy {
+  font-family: var(--cv-serif);
+  font-size: 12.4pt;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.curriculum-vitae__page--second {
+  display: flex;
+  flex-direction: column;
+  gap: 7mm;
+  justify-content: center;
+}
+
+.curriculum-vitae__page-header {
+  align-items: baseline;
+  display: flex;
+  font-family: var(--cv-mono);
+  font-size: 7pt;
+  justify-content: space-between;
+}
+
+.curriculum-vitae__page-header p {
+  margin: 0;
+}
+
+.curriculum-vitae__page--second .cv-document-projects__item:last-child,
+.curriculum-vitae__page--second .curriculum-vitae__complementary .cv-document-timeline__item:last-child,
+.curriculum-vitae__page--second .curriculum-vitae__education .cv-document-timeline__item:last-child {
+  border-bottom: 0;
+}
+
+.curriculum-vitae__footer {
+  color: var(--cv-muted);
+  font-family: var(--cv-mono);
+  font-size: 6.5pt;
+  position: absolute;
+  right: 14mm;
+  top: 10mm;
+}
+
+@page {
+  margin: 4.2mm;
+  size: A4;
+}
+
+@media print {
+  .curriculum-vitae-page {
+    background: var(--cv-white);
+    padding: 0;
+  }
+
+  .curriculum-vitae-page__toolbar {
+    display: none;
+  }
+
+  .curriculum-vitae {
+    display: block;
+    margin: 0;
+    width: 201.6mm;
+  }
+
+  .curriculum-vitae__page {
+    box-shadow: none;
+    height: 288.6mm;
+    min-height: 288.6mm;
+    width: 201.6mm;
+  }
+
+  .curriculum-vitae__page--second {
+    gap: 3mm;
+    padding: 10mm 14mm 9mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-section__heading {
+    margin-bottom: 2.5mm;
+    padding-top: 2mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-projects__item,
+  .curriculum-vitae__page--second .cv-document-timeline__item {
+    gap: 3mm;
+    padding: 2.5mm 0 3mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-projects__title {
+    font-size: 12.4pt;
+  }
+
+  .curriculum-vitae__page--second .cv-document-projects__description {
+    font-size: 7.9pt;
+    line-height: 1.32;
+    margin: 1.5mm 0 1.8mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-projects__technologies li {
+    padding: 0.8mm 1.2mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-timeline__role {
+    margin: 0.8mm 0 1.2mm;
+  }
+
+  .curriculum-vitae__page--second .cv-document-timeline__description {
+    font-size: 7.8pt;
+    line-height: 1.3;
+  }
+
+  .curriculum-vitae__page--second .curriculum-vitae__complementary .cv-document-timeline {
+    column-gap: 5mm;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curriculum-vitae__page--second .curriculum-vitae__complementary .cv-document-timeline__item {
+    grid-template-columns: 19mm minmax(0, 1fr);
+  }
+
+  .curriculum-vitae__page--second .curriculum-vitae__education .cv-document-timeline {
+    column-gap: 4mm;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .curriculum-vitae__page--second .curriculum-vitae__education .cv-document-timeline__item {
+    display: block;
+  }
+
+  .curriculum-vitae__page--second .curriculum-vitae__education .cv-document-timeline__period {
+    margin-bottom: 1mm;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .curriculum-vitae-page {
+    padding: 14px;
+  }
+
+  .curriculum-vitae-page__toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+
+  .curriculum-vitae-page__toolbar-action {
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .curriculum-vitae {
+    gap: 0;
+    width: 100%;
+  }
+
+  .curriculum-vitae__page {
+    box-shadow: none;
+    min-height: auto;
+    padding: 8mm;
+    width: 100%;
+  }
+
+  .curriculum-vitae__content {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-vitae__page-header {
+    align-items: start;
+    flex-direction: column;
+    gap: 2mm;
+  }
+}

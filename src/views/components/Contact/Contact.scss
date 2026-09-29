@@ -102,6 +102,18 @@
   color: var(--ink);
 }
 
+.contact__privacy-notice {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  margin: 16px 0 0;
+}
+
+.contact__privacy-notice a {
+  color: var(--ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .contact__links {
   display: flex;
   flex-wrap: wrap;

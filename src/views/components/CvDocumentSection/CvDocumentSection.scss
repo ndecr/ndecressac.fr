@@ -1,0 +1,25 @@
+.cv-document-section {
+  break-inside: avoid;
+}
+
+.cv-document-section__heading {
+  align-items: baseline;
+  border-top: 1px solid var(--cv-ink);
+  display: flex;
+  gap: 4mm;
+  margin-bottom: 4mm;
+  padding-top: 2.5mm;
+}
+
+.cv-document-section__number {
+  font-family: var(--cv-mono);
+  font-size: 7pt;
+  font-weight: 700;
+}
+
+.cv-document-section__title {
+  font-size: 10.5pt;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0;
+}

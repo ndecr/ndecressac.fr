@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import type { IconType } from "react-icons";
 import type { ContactFormModel } from "../../../hooks";
 import type { PortfolioContent, SocialLink } from "../../../types";
@@ -47,6 +48,9 @@ export function Contact({ content, form, socialLinks, linksLabel, externalLinkLa
           <span>{form.status === "sending" ? content.form.sending : content.form.submit}</span>
           <FiArrowUpRight aria-hidden="true" />
         </button>
+        <p className="contact__privacy-notice">
+          {content.form.privacyNotice} <Link to="/mentions-legales/">{content.form.privacyLinkLabel}</Link>
+        </p>
         {form.statusMessage !== null ? <p className={`contact__feedback contact__feedback--${form.status}`} role="status" aria-live="polite">{form.statusMessage}</p> : null}
       </form>
       <nav className="contact__links" aria-label={linksLabel}>

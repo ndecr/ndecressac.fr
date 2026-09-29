@@ -1,0 +1,77 @@
+.cv-document-sidebar {
+  background: var(--cv-paper);
+  display: flex;
+  flex-direction: column;
+  gap: 7mm;
+  padding: 8mm 6mm;
+}
+
+.cv-document-sidebar__portrait {
+  background: var(--cv-blue-dark);
+  height: 65mm;
+  margin: 0 0 1mm;
+  overflow: hidden;
+  position: relative;
+}
+
+.cv-document-sidebar__portrait::before {
+  background: var(--cv-yellow);
+  content: "";
+  height: 9mm;
+  left: -3mm;
+  position: absolute;
+  top: -3mm;
+  width: 9mm;
+  z-index: 1;
+}
+
+.cv-document-sidebar__portrait-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  transform: scale(1.18);
+  transform-origin: center 28%;
+  width: 100%;
+}
+
+.cv-document-sidebar__contact-list,
+.cv-document-sidebar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-document-sidebar__contact-list {
+  display: grid;
+  gap: 3mm;
+}
+
+.cv-document-sidebar__contact-item {
+  display: grid;
+  gap: 0.7mm;
+}
+
+.cv-document-sidebar__contact-item span {
+  color: var(--cv-muted);
+  font-family: var(--cv-mono);
+  font-size: 6.5pt;
+  text-transform: uppercase;
+}
+
+.cv-document-sidebar__contact-item a {
+  color: var(--cv-ink);
+  font-size: 7.5pt;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.cv-document-sidebar__list {
+  display: grid;
+  gap: 2.6mm;
+}
+
+.cv-document-sidebar__list li {
+  font-size: 8pt;
+  line-height: 1.35;
+}

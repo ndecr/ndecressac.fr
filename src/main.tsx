@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
-import { hydrateRoot } from "react-dom/client";
-import { LanguageProvider } from "./context";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { CookieConsentProvider, LanguageProvider } from "./context";
 import { i18nReady } from "./services";
 import "./utils/styles/global.scss";
-import { HomePage } from "./views/layouts";
+import { ApplicationRouter } from "./views/layouts";
 
 const rootElement = document.getElementById("root");
 
@@ -13,12 +14,21 @@ if (rootElement === null) {
 
 const application = (
   <StrictMode>
-    <LanguageProvider>
-      <HomePage />
-    </LanguageProvider>
+    <BrowserRouter>
+      <LanguageProvider>
+        <CookieConsentProvider>
+          <ApplicationRouter />
+        </CookieConsentProvider>
+      </LanguageProvider>
+    </BrowserRouter>
   </StrictMode>
 );
 
 void i18nReady.then(() => {
-  hydrateRoot(rootElement, application);
+  if (rootElement.hasChildNodes()) {
+    hydrateRoot(rootElement, application);
+    return;
+  }
+
+  createRoot(rootElement).render(application);
 });

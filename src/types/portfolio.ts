@@ -35,6 +35,23 @@ export interface TimelineItem {
   readonly description: string;
 }
 
+export interface LegalSection {
+  readonly title: string;
+  readonly paragraphs: readonly string[];
+}
+
+export interface LegalContent {
+  readonly eyebrow: string;
+  readonly title: string;
+  readonly returnHome: string;
+  readonly sections: readonly LegalSection[];
+  readonly cookieSettingsTitle: string;
+  readonly cookieSettingsDescription: string;
+  readonly acceptAnalytics: string;
+  readonly rejectAnalytics: string;
+  readonly savedPreferences: string;
+}
+
 export interface SocialLink {
   readonly kind: "github" | "linkedin";
   readonly label: string;
@@ -87,6 +104,7 @@ export interface PortfolioContent {
     readonly visualAlt: string;
     readonly principles: readonly string[];
     readonly timelineTitle: string;
+    readonly curriculumVitaeAction: string;
     readonly timeline: readonly TimelineItem[];
   };
   readonly contact: {
@@ -102,11 +120,27 @@ export interface PortfolioContent {
       readonly submit: string;
       readonly subjectLabel: string;
       readonly success: string;
+      readonly privacyNotice: string;
+      readonly privacyLinkLabel: string;
     };
   };
   readonly footer: {
     readonly availability: string;
     readonly copyright: string;
+    readonly legalLinkLabel: string;
+  };
+  readonly cookieConsent: {
+    readonly title: string;
+    readonly description: string;
+    readonly accept: string;
+    readonly reject: string;
+    readonly customize: string;
+    readonly back: string;
+    readonly requiredLabel: string;
+    readonly requiredStatus: string;
+    readonly analyticsLabel: string;
+    readonly analyticsDescription: string;
+    readonly savePreferences: string;
   };
 }
 
